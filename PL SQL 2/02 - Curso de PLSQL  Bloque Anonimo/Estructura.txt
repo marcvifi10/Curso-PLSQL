@@ -1,0 +1,12 @@
+// ----------ESTRUCTURA-----------------
+
+DECLARE
+	/* Comentario 1 */
+
+BEGIN
+	/* Comentario 2 */
+
+EXCEPTION
+	/* Comentario 3 */
+
+END;

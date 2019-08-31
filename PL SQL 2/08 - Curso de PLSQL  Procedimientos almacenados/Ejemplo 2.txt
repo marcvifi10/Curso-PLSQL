@@ -1,0 +1,28 @@
+CREATE OR REPLACE PROCEDURE aumenta_salario(id NUMBER, aumento NUMBER)
+AS
+	--variables locales
+	sactual1:=0;
+	sactual2:=0;
+
+BEGIN
+	SELECT salary
+	INTO sactual1
+	FROM employees 
+	WHERE employee_id=id;
+
+	commit;
+
+	SELECT salary
+	INTO sactual2
+	FROM employees 
+	WHERE employee_id=id;
+
+	dbms_output.put_line("El salario posterior es "||sactual2);
+	
+END;
+
+// Llamamos a la función
+BEGIN
+	aumenta_salario(id => :id,
+			aumento => :aumento);
+END;

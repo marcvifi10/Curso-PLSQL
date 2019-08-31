@@ -1,0 +1,24 @@
+-- Comentarios
+
+get serveroutput on format wrapped;
+
+DECLARE 
+	miVariable varchar2(20);
+	edad number(2);
+	fecha date;
+
+BEGIN
+
+	miVariable := "Marc";
+	edad := 23;
+
+	dbms_output.put_line("Hola mundo!!! "||"Hola "||miVariable||"!!!");
+	dbms_output.put_line("Tienes "||to_char(edad)||" años!!!")
+	
+	fecha := sysdate + 7;
+
+	dbms_output.put_line("Hoy es "||to_char(sysdate,"dd/mm/yyyy")||
+			     ", dentro de una semana sera "||
+                             to_char(fecha,"dd/mm/yyyy"))
+
+END;

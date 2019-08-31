@@ -1,0 +1,12 @@
+CREATE FUNCTION nombre_funcion
+	(codigo IN number)
+RETURN number
+
+AS
+
+BEGIN
+
+	SELECT AVG(SALARI)
+	FROM EMPLOYEES;
+
+END;

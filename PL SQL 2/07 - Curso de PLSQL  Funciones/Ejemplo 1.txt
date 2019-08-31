@@ -1,0 +1,16 @@
+CREATE [OR REPLACE]
+FUNCTION funcion1(p1 number)
+RETURN number
+IS
+	numero NUMBER:=10;
+	result NUMBER;
+
+BEGIN
+	result:=numero+p1;
+	
+	return(result);
+
+EXCEPTION
+	when others then
+		return(0);	
+END [fn_name];

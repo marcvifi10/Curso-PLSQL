@@ -1,0 +1,11 @@
+CREATE [OR REPLACE]
+FUNCTION nombre_funcion(nombre_var IN tipo_var, nombre_var IN tipo_var...)
+RETURN return_type
+IS
+	result <return_type>;
+BEGIN
+	
+	return [result];
+[EXCEPTION]
+
+END [fn_name];

@@ -1,0 +1,16 @@
+CREATE [OR REPLACE]
+FUNCTION Obtener_salario(impuesto number)
+RETURN number
+IS
+	variable NUMBER;
+
+BEGIN
+	SELECT max(MAX_SALARY) + impuesto
+	INTO variable 
+	FROM jobs;
+	return(variable);
+
+EXCEPTION
+	when NO_DATA_FOUND then
+		return(0);	
+END [fn_name];

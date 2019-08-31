@@ -1,0 +1,6 @@
+CREATE OR REPLACE PROCEDURE today_is/* Parametros */
+AS
+	--variables locales
+BEGIN
+	dbms_output.put_line("Hoy es "||to_char(sysdate, "DD/MM/YYYY"));
+END;

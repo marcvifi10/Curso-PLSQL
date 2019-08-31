@@ -1,0 +1,13 @@
+DECLARE
+	cantidad NUMBER:=0;
+
+
+BEGIN
+
+	while cantidad <= 215
+	LOOP
+		dbms_output.put_line("N = "||cantidad);
+		cantidad := cantidad+1;
+	END LOOP;
+
+END;

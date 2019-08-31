@@ -1,0 +1,64 @@
+DECLARE
+
+	nombreEmpleado EMPLOYEES.FIRST_NAME%TYPE;
+	apellidoEmpleado EMPLOYEES.LAST_NAME%TYPE;
+	salarioEmpleado EMPLOYEES.SALARY%TYPE;
+
+	i number(3) := 0;
+
+BEGIN
+
+	LOOP
+
+		i := i + 1;
+
+		SELECT FIRST_NAME, LAST_NAME SALARY 
+		INTO nombreEmpleado, apellidoEmpleado, salarioEmpleado
+		FROM EMPLOYEES
+		WHERE ID = i + 100;
+
+		dbms_output.put_line("El empleado "
+				     ||nombreEmpleado||" "
+			             ||apellidoEmpleado||", gana "
+                                     ||to_char(salarioEmpleado));
+
+
+	END LOOP;
+
+	
+
+
+	FOR j IN 101..120 LOOP
+
+		SELECT FIRST_NAME, LAST_NAME SALARY 
+		INTO nombreEmpleado, apellidoEmpleado, salarioEmpleado
+		FROM EMPLOYEES
+		WHERE ID = j;
+
+		dbms_output.put_line("El empleado "
+				     ||nombreEmpleado||" "
+			             ||apellidoEmpleado||", gana "
+                                     ||to_char(salarioEmpleado));
+
+
+	END LOOP;
+
+
+
+	WHILE(i <= 100) LOOP
+
+		i := i+1;
+
+		SELECT FIRST_NAME, LAST_NAME SALARY 
+		INTO nombreEmpleado, apellidoEmpleado, salarioEmpleado
+		FROM EMPLOYEES
+		WHERE ID = i + 100;
+
+		dbms_output.put_line("El empleado "
+				     ||nombreEmpleado||" "
+			             ||apellidoEmpleado||", gana "
+                                     ||to_char(salarioEmpleado,"000,000,000.00"));
+
+	END LOOP;
+
+END;

@@ -1,0 +1,14 @@
+CASE (expresion)
+
+	WHEN condicion_1 THEN result_1
+
+	WHEN condicion_2 THEN result_2
+	
+	WHEN condicion_3 THEN result_3
+
+	...
+
+	ELSE result
+
+END
+	

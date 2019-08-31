@@ -1,0 +1,34 @@
+DECARE
+
+	// declaración de variables
+
+BEGIN
+
+	IF condition THEN
+		...
+	END IF;
+
+
+
+	IF condition THEN
+		...
+	ELSE 
+		...
+	END IF;
+
+
+
+	IF condition1 THEN
+		...
+	ELSIF condition2 THEN
+		...
+	ELSE 
+		...
+	END IF;
+
+END;
+
+
+UPPER = pasa a mayúsculas 
+TRIM = quita los espacios de una cadena de texto
+LIKE = "=" 
